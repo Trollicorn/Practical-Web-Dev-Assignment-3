@@ -1,10 +1,12 @@
 import { Component } from "react";
+import Customize from "./Customize";
 
 class Profile extends Component {
     constructor (props) {
         super(props);
-        this.state = {username: "User", showForm: false};
+        this.state = {username: "User", showForm: false, userChange: this.changeUsername};
         this.changeShowForm = this.changeShowForm.bind(this);
+        this.changeUsername = this.changeUsername.bind(this);
     }
 
     changeShowForm(event){
@@ -13,21 +15,20 @@ class Profile extends Component {
         }));
     }
 
+    changeUsername(event){
+        this.setState({username: event.target.value});
+    }
+
     render() {
-        
-        const showForm = this.state.showForm;
-        let content;
-        if (showForm){
-            content = <h3>form here</h3>;
-        }else{
-            content = <h3>no form</h3>;
-        }
-        
+                
         return (
             <div>
                 <h2> Hello {this.state.username}! </h2>
                 <button onClick={this.changeShowForm}>Edit Profile</button>
-                {content}
+                <Customize 
+                showForm={this.state.showForm} 
+                username={this.state.username}
+                changeUsername={this.changeUsername}/>
             </div>
         );
     }
