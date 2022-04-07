@@ -16,11 +16,10 @@ class Profile extends Component {
     }
 
     changeUsername(event){
-        this.setState({username: event.target.value});
+        this.setState({username: event.target.username.value});
     }
 
-    render() {
-                
+    render() {      
         return (
             <div>
                 <h2> Hello {this.state.username}! </h2>
