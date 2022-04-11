@@ -28,7 +28,9 @@ class Profile extends Component {
                 showForm={this.state.showForm} 
                 username={this.state.username}
                 changeUsername={this.changeUsername}
-                changeShowForm={this.changeShowForm}/>
+                changeShowForm={this.changeShowForm}
+                changeTextColor={this.props.changeTextColor}
+                txcolor={this.props.txcolor}/>
             </div>
         );
     }
