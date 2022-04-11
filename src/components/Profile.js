@@ -27,7 +27,8 @@ class Profile extends Component {
                 <Customize 
                 showForm={this.state.showForm} 
                 username={this.state.username}
-                changeUsername={this.changeUsername}/>
+                changeUsername={this.changeUsername}
+                changeShowForm={this.changeShowForm}/>
             </div>
         );
     }
