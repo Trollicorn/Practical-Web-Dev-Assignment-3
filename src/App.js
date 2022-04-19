@@ -1,6 +1,7 @@
 import {Component} from "react";
 import Profile from './components/Profile'
 import Clock from './components/Clock'
+import ApiData from './components/ApiData'
 
 class App extends Component{
   constructor(props){
@@ -18,6 +19,7 @@ class App extends Component{
           <div className="App" style={{color: this.state.txcolor}}>
               <Profile changeTextColor={this.changeTextColor} txcolor={this.state.txcolor}/>
               <Clock/>
+              <ApiData/>
           </div>
     );
   }
