@@ -1,10 +1,13 @@
 {
   "files": {
-    "main.js": "/Practical-Web-Dev-Assignment-3/static/js/main.585b6e5f.js",
+    "main.css": "/Practical-Web-Dev-Assignment-3/static/css/main.65be1644.css",
+    "main.js": "/Practical-Web-Dev-Assignment-3/static/js/main.fe67e4c3.js",
     "index.html": "/Practical-Web-Dev-Assignment-3/index.html",
-    "main.585b6e5f.js.map": "/Practical-Web-Dev-Assignment-3/static/js/main.585b6e5f.js.map"
+    "main.65be1644.css.map": "/Practical-Web-Dev-Assignment-3/static/css/main.65be1644.css.map",
+    "main.fe67e4c3.js.map": "/Practical-Web-Dev-Assignment-3/static/js/main.fe67e4c3.js.map"
   },
   "entrypoints": [
-    "static/js/main.585b6e5f.js"
+    "static/css/main.65be1644.css",
+    "static/js/main.fe67e4c3.js"
   ]
 }
