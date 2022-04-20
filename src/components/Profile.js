@@ -22,8 +22,8 @@ class Profile extends Component {
     render() {      
         return (
             <div>
-                <h2> Hello {this.state.username}! </h2>
-                <button onClick={this.changeShowForm}>Edit Profile</button>
+                <h2> Hello {this.state.username}! 
+                <button onClick={this.changeShowForm}>Edit Profile</button> </h2>
                 <Customize 
                 showForm={this.state.showForm} 
                 username={this.state.username}

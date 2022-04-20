@@ -1,14 +1,65 @@
-table, th, td{
+body{
+    text-align: center;
+}
+
+fieldset{
+    width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: large;
+}
+
+button{
+    font-size: medium;
+}
+
+input{
+    font-size: medium;
+}
+
+th, td{
     border: 1px solid;
 }
 
 table{
-    border-collapse: collapse;
     margin-left: auto;
     margin-right: auto;
+    font-size: large;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border: 1px solid;
+    border-radius: 10px;
+}
+
+caption{
+    font-size: larger;
+    padding:10px;
+}
+
+select{
+    font-size: large;
+}
+
+th{
+    padding:30px;
+    font-size: larger;
 }
 
 td{
-    width: 200px;
-    height: 70px;
+    width:250px;
+    height:100px;
+    text-align: center;
+}
+
+th:first-of-type {
+    border-top-left-radius: 10px;
+}
+th:last-of-type {
+    border-top-right-radius: 10px;
+}
+tr:last-of-type td:first-of-type {
+    border-bottom-left-radius: 10px;
+}
+tr:last-of-type td:last-of-type {
+    border-bottom-right-radius: 10px;
 }
