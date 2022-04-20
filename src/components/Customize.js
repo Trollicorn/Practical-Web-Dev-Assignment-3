@@ -4,7 +4,10 @@ class Customize extends Component {
     constructor(props){
         super(props);
         this.handleSubmit = this.handleSubmit.bind(this);
-        this.state = {txcolor: "#0000FF"};
+        this.state = {
+            bgcolor: "#FFFFFF",
+            txcolor: "#0000FF"
+        };
     }
 
 
@@ -17,6 +20,7 @@ class Customize extends Component {
     }
 
     changeBackgroundColor(color){
+        this.setState({bgcolor: color});
         document.body.style.backgroundColor = color;
     }
 
@@ -28,7 +32,7 @@ class Customize extends Component {
                 <fieldset>
                 <legend>Change your profile here</legend>
                 Username: <input type="text" name="username" defaultValue={this.props.username} /><br/>
-                Background Color: <input type="text" name="bgcolor" defaultValue="#FFFFFF"/><br/>
+                Background Color: <input type="text" name="bgcolor" defaultValue={this.state.bgcolor}/><br/>
                 Text Color: <input type="text" name="txcolor" defaultValue={this.props.txcolor}/><br/>
                 <input type="submit" value="Submit"/> 
                 </fieldset>
