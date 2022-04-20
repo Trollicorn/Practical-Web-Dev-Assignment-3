@@ -3,6 +3,8 @@ import Profile from './components/Profile'
 import Clock from './components/Clock'
 import ApiData from './components/ApiData'
 
+import './App.css'
+
 class App extends Component{
   constructor(props){
     super(props);
