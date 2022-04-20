@@ -7,7 +7,7 @@ class ApiData extends Component {
         this.state = {
             debits: [],
             credits: [],
-            showDebits: true
+            showing: "debit"
         };
         this.changeShowing = this.changeShowing.bind(this);
     }
@@ -38,13 +38,12 @@ class ApiData extends Component {
     }
 
     changeShowing(event){
-        this.setState(prevState => ({
-            showDebits: !prevState.showDebits
-        }));
+        console.log(event.target.value);
+        this.setState({showing: event.target.value});
     }
 
     makeTable(){
-        let arr = this.state.showDebits ? this.state.debits : this.state.credits;
+        let arr = this.state.showing === "debit" ? this.state.debits : this.state.credits;
         let table = [];
         for (let i = 0; i < arr.length; ++i){
             let row = arr[i];
@@ -64,9 +63,11 @@ class ApiData extends Component {
             <div>
                 <table>
                     <caption>
-                        Showing {this.state.showDebits?"Debits":"Credits"}
-                        <br/>
-                        <button onClick={this.changeShowing}>View {this.state.showDebits?"Credits":"Debits"} instead</button>
+                        Currently viewing 
+                        <select name="view" onChange={this.changeShowing}>
+                            <option value="debit">Debit</option>
+                            <option value="credit">Credit</option>
+                        </select>
                     </caption>
                     <thead><tr>
                         <th>Item</th>
